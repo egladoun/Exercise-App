@@ -15,6 +15,31 @@
 		    	<li><a href="sharing-with-friends.html">Sharing With Friends</a></li>
 				<li><a href="index.html">Logout</a></li>
 		   	</ul>
-		 </aside>
+		</aside>
+
+		<div class="field" style="margin-left: 5%; margin-right: 50%;">
+			<div class="control">
+				<textarea class="textarea" placeholder="Enter completed exercise here"></textarea>
+			</div>
+		</div>
+
+		<div class="field">
+			<button class="button is-rounded is-normal" style="margin-left: 5%;"
+			onclick="displayDate()" type="submit">Submit</button>
+		</div>
+
+		<div class="field">
+			<p id="p1" style="margin-left: 5%;"></p>
+			<p id="p2" style="margin-left: 5%;"></p>
+		</div>
+
+
+		<script>
+			//document.getElementById("p1").innerHTML = "using JavaScript";
+
+			function displayDate() {
+				document.getElementById("p2").innerHTML = Date();
+			}
+		</script>
 	</body>
 </html>
