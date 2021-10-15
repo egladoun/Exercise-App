@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue';
 import AppInfo from '../views/AppInfo.vue';
+import ProfileManagement from '../views/ProfileManagement.vue';
 
 
 const routes = [
@@ -13,6 +14,11 @@ const routes = [
         path: '/AppInfo',
         name: 'AppInfo',
         component: AppInfo
+    },
+    {
+        path: '/ProfileManagement',
+        name: 'ProfileManagement',
+        component: ProfileManagement
     },
 ]
 

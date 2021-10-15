@@ -3,7 +3,7 @@
         <ul class="menu-list">
             <li><a href="/">Home</a></li>
             <li><a href="/AppInfo">App Info</a></li>
-            <li><a href="#">Profile Management</a></li>
+            <li><a href="/ProfileManagement">Profile Management</a></li>
             <li><a href="#">Exercise Log</a></li>
             <li><a href="#">Weekly Schedule</a></li>
             <li><a href="#">Sharing With Friends</a></li>
