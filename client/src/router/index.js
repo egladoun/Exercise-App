@@ -5,6 +5,7 @@ import Profile from '../views/Profile.vue';
 import ExerciseLog from '../views/ExerciseLog.vue';
 import Schedule from '../views/Schedule.vue';
 import Sharing from '../views/Sharing.vue';
+import Login from '../views/Login.vue';
 
 
 const routes = [
@@ -37,6 +38,11 @@ const routes = [
         path: '/Sharing',
         name: 'Sharing',
         component: Sharing
+    },
+    {
+        path: '/Login',
+        name: 'Login',
+        component: Login
     }
 ]
 

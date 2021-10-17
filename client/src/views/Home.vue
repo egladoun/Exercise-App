@@ -7,7 +7,7 @@
         </pre>
 
       <div class="container">
-        <div class="field" style="margin-left: 20%;">
+        <div class="field" style="margin-left: 15%;">
         <router-link class="button is-link is-light is-rounded is-normal"
         to="/AppInfo">Click here for more information</router-link>
         </div>

@@ -31,6 +31,11 @@
                     Sharing With Friends
                 </router-link>
             </li>
+            <li>
+                <router-link to="/Login" active-class="is-active">
+                    Login
+                </router-link>
+            </li>
         </ul>
     </aside>
 </template>
