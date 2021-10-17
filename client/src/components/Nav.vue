@@ -12,7 +12,7 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/ProfileManagement" active-class="is-active">
+                <router-link to="/Profile" active-class="is-active">
                     Profile Management
                 </router-link>
             </li>

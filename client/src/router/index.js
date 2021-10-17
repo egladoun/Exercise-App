@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue';
 import AppInfo from '../views/AppInfo.vue';
-import ProfileManagement from '../views/ProfileManagement.vue';
+import Profile from '../views/Profile.vue';
+import ExerciseLog from '../views/ExerciseLog.vue';
+import Schedule from '../views/Schedule.vue';
+import Sharing from '../views/Sharing.vue';
 
 
 const routes = [
@@ -16,10 +19,25 @@ const routes = [
         component: AppInfo
     },
     {
-        path: '/ProfileManagement',
-        name: 'ProfileManagement',
-        component: ProfileManagement
+        path: '/Profile',
+        name: 'Profile',
+        component: Profile
     },
+    {
+        path: '/ExerciseLog',
+        name: 'ExerciseLog',
+        component: ExerciseLog
+    },
+    {
+        path: '/Schedule',
+        name: 'Schedule',
+        component: Schedule
+    },
+    {
+        path: '/Sharing',
+        name: 'Sharing',
+        component: Sharing
+    }
 ]
 
 const router = createRouter({
