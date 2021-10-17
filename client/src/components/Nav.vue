@@ -1,8 +1,16 @@
 <template>
     <aside class="menu" style="float:left; border-color: black; border-style: none solid none none;">
         <ul class="menu-list">
-            <li><a href="/">Home</a></li>
-            <li><a href="/AppInfo">App Info</a></li>
+            <li>
+                <router-link to="/" active-class="is-active" exact>
+                    Home
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/AppInfo" active-class="is-active">
+                    App Info
+                </router-link>
+            </li>
             <li><a href="/ProfileManagement">Profile Management</a></li>
             <li><a href="#">Exercise Log</a></li>
             <li><a href="#">Weekly Schedule</a></li>
