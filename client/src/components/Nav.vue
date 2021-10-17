@@ -7,7 +7,6 @@
             <li><a href="#">Exercise Log</a></li>
             <li><a href="#">Weekly Schedule</a></li>
             <li><a href="#">Sharing With Friends</a></li>
-            <li><a href="#">Logout</a></li>
         </ul>
     </aside>
 </template>
