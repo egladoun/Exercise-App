@@ -20,8 +20,8 @@
 			</pre>
 
       <div class="container" style="margin-left: 20%;">
-			<a class="button is-link is-light is-rounded is-normal"
-			href="/">Back to home</a>
+			<router-link class="button is-link is-light is-rounded is-normal"
+			to="/">Back to home</router-link>
 		</div>
   </div>
 </template>

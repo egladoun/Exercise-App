@@ -11,10 +11,26 @@
                     App Info
                 </router-link>
             </li>
-            <li><a href="/ProfileManagement">Profile Management</a></li>
-            <li><a href="#">Exercise Log</a></li>
-            <li><a href="#">Weekly Schedule</a></li>
-            <li><a href="#">Sharing With Friends</a></li>
+            <li>
+                <router-link to="/ProfileManagement" active-class="is-active">
+                    Profile Management
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/ExerciseLog" active-class="is-active">
+                    Exercise Log
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/Schedule" active-class="is-active">
+                    Weekly Schedule
+                </router-link>
+            </li>
+            <li>
+                <router-link to="/Sharing" active-class="is-active">
+                    Sharing With Friends
+                </router-link>
+            </li>
         </ul>
     </aside>
 </template>
