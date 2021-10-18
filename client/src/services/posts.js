@@ -8,7 +8,7 @@ const list = [
         isPublic: true,
     },
     {
-        caption: "Lorem Ipsom",
+        caption: "Dolor Sit",
         time: Date(),
         user_handle: "@ms",
         isPublic: true,
