@@ -1,4 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router';
+import Session from '../services/session';
 import Home from '../views/Home.vue';
 import AppInfo from '../views/AppInfo.vue';
 import Profile from '../views/Profile.vue';
@@ -22,22 +23,26 @@ const routes = [
     {
         path: '/Profile',
         name: 'Profile',
-        component: Profile
+        component: Profile,
+        meta: { requiresLogin: true }
     },
     {
         path: '/ExerciseLog',
         name: 'ExerciseLog',
-        component: ExerciseLog
+        component: ExerciseLog,
+        meta: { requiresLogin: true }
     },
     {
         path: '/Schedule',
         name: 'Schedule',
-        component: Schedule
+        component: Schedule,
+        meta: { requiresLogin: true }
     },
     {
         path: '/Sharing',
         name: 'Sharing',
-        component: Sharing
+        component: Sharing,
+        meta: { requiresLogin: true }
     },
     {
         path: '/Login',
@@ -51,12 +56,12 @@ const router = createRouter({
     routes
   })
   
-/*  router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
       if(to.meta.requiresLogin && !Session.user){
           next('/login');
       }else{
           next();
       }
-    } )*/
+} )
   
-  export default router
+ export default router
