@@ -5,14 +5,16 @@ const session = {
     user: null,
     messages: [],
     toRoute: '/Sharing',
-    Login(handle, password){
+    async Login(handle, password){
+        try{
+            const response = Login(handle, password);
 
-        const response = Login(handle, password);
+            this.user = response.user;
 
-        this.user = response.user;
-
-        router.push(this.toRoute);
-
+            router.push(this.toRoute);
+        } catch (error) {
+            console.log("There was a problem in logging in");
+        }
     }
 };
 

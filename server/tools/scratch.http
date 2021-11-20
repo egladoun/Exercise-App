@@ -1,0 +1,58 @@
+POST http://localhost:3100/users/register
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Jackson",
+    "handle": "@jj",
+    "password": "123",
+    "isAdmin": true,
+    "emails": [
+        "john@jackson.com"
+    ]
+}
+
+###
+POST http://localhost:3100/users/register
+Content-Type: application/json
+
+{
+    "firstName": "Mary",
+    "lastName": "Smith",
+    "handle": "@ms",
+    "password": "abs",
+    "isAdmin": true,
+    "emails": [
+        "mary@smith.com"
+    ]
+}
+
+###
+POST http://localhost:3100/users/register
+Content-Type: application/json
+
+{
+    "firstName": "Romeo",
+    "lastName": "Montague",
+    "handle": "@romeo",
+    "password": "12345",
+    "isAdmin": true,
+    "emails": [
+        "romeo@montague.com"
+    ]
+}
+
+###
+POST http://localhost:3100/users/register
+Content-Type: application/json
+
+{
+    "firstName": "Juliet",
+    "lastName": "Capulet",
+    "handle": "@juliet",
+    "password": "12345",
+    "isAdmin": true,
+    "emails": [
+        "juliet@capulet.com"
+    ]
+}
