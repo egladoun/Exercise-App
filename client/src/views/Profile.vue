@@ -4,7 +4,13 @@
             <p style="margin-left: 15%;">Name: {{name}}</p>
         </div>
         <div class="block" style="margin:">
-            <p style="margin-left: 15%;">Handle: {{this.Session.user.handle}}</p>
+            <p style="margin-left: 15%;">Handle: {{handle}}</p>
+        </div>
+        <div class="card" style="margin-left: 15%;">
+            <p>Profile picture:</p><br>
+            <figure>
+                <img :src=picture :alt=user_handle>
+            </figure>
         </div>
     </div>
 </template>
@@ -23,9 +29,15 @@ export default {
             this.$router.push('/login');
         }
     },
-    computed:{
+    computed: {
         name(){
             return this.Session.user.firstName + ' ' + this.Session.user.lastName;
+        },
+        handle(){
+            return this.Session.user.handle;
+        },
+        picture(){
+            return this.Session.user.pic;
         }
     }
 }

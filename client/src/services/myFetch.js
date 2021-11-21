@@ -22,6 +22,6 @@ export async function api(url, data = null, method = null) {
         }
         return await response.json();
     } catch (error) {
-        console.log("There was an error");
+        console.log(`There was an error`);
     }
 }
