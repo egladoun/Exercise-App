@@ -10,7 +10,8 @@ Content-Type: application/json
     "isAdmin": true,
     "emails": [
         "john@jackson.com"
-    ]
+    ],
+    "following": [ { "handle": "@ms", "isApproved": true } ]
 }
 
 ###
@@ -26,7 +27,8 @@ Content-Type: application/json
     "isAdmin": true,
     "emails": [
         "mary@smith.com"
-    ]
+    ],
+    "following": [ { "handle": "@jj", "isApproved": true } ]
 }
 
 ###
@@ -42,7 +44,8 @@ Content-Type: application/json
     "isAdmin": true,
     "emails": [
         "romeo@montague.com"
-    ]
+    ],
+    "following": [ { "handle": "@juliet", "isApproved": true } ]
 }
 
 ###
@@ -58,11 +61,12 @@ Content-Type: application/json
     "isAdmin": true,
     "emails": [
         "juliet@capulet.com"
-    ]
+    ],
+    "following": [ { "handle": "@romeo", "isApproved": true } ]
 }
 
 ###
-DELETE http://localhost:3100/users/619994d507f0ab68c4671b4d
+DELETE http://localhost:3100/users/6199a0d1a1535713462499f0
 
 ###
 PATCH http://localhost:3100/users/6199a08ba1535713462499ef
@@ -71,3 +75,42 @@ Content-Type: application/json
 {
     "firstName": "Romeo"
 }
+
+###
+POST http://localhost:3100/posts
+Content-Type: application/json
+
+{
+    "src": "https://cdn1.parksmedia.wdprapps.disney.com/media/espnwwos/complex/track-and-field-complex/new-balance-track-and-field-slide-1.jpg",
+    "alt": "A track field",
+    "caption": "A track field",
+    "user_handle": "@jj",
+    "isPublic": true
+}
+
+###
+POST http://localhost:3100/posts
+Content-Type: application/json
+
+{
+    "src": "https://img.olympicchannel.com/images/image/private/t_16-9_3200/primary/xnungpx8jbh4y1iimo6p",
+    "alt": "An olympic stadium",
+    "caption": "I think I might train for the Olympics!",
+    "user_handle": "@jj",
+    "isPublic": true
+}
+
+###
+POST http://localhost:3100/posts
+Content-Type: application/json
+
+{
+    "src": "https://s7d2.scene7.com/is/image/TWCNews/brooklyn-gym-generic-file-covidjpg",
+    "alt": "A picture of a gym",
+    "caption": "A picture of a gym",
+    "user_handle": "@ms",
+    "isPublic": true
+}
+
+###
+DELETE  http://localhost:3100/posts/619e7b53fcbc1bc4575ece0b
