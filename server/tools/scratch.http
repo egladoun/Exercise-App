@@ -113,4 +113,27 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:3100/posts/619e7b53fcbc1bc4575ece0b
+POST http://localhost:3100/posts
+Content-Type: application/json
+
+{
+    "src": "https://cdn.shopify.com/s/files/1/2081/1519/products/1600x1067_Sparrow_White_Blue_ANGLE.jpg?v=1590502984",
+    "alt": "A bike",
+    "caption": "A bike",
+    "user_handle": "@ms",
+    "isPublic": true
+}
+
+###
+DELETE  http://localhost:3100/posts/619e967efec250af513b4a2b
+
+###
+PATCH http://localhost:3100/posts/619e967efec250af513b4a2b
+Content-Type: application/json
+
+{
+    "caption": "A bike"
+}
+
+###
+POST http://localhost:3100/posts/seed

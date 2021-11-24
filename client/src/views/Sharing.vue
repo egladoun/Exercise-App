@@ -2,7 +2,9 @@
   <div class="Sharing">
     <div class="container">
         <div class="column">
-            
+
+            <postInput :new-post="newPost" />
+
             <div class="post" v-for="p in posts" :key="p.src">
                 <post :post="p" />
             </div>
@@ -17,14 +19,18 @@
 import Post from '../components/Post.vue';
 import session from "../services/session";
 import { GetFeed } from "../services/posts";
-//import { GetWall } from "../services/posts";
+import postInput from "../components/postInput.vue";
+
+const newPost = ()=> ({ user: session.user, user_handle: session.user.handle })
+
 export default {
   components: {
-    Post
+    Post,
+    postInput
     },
     data: ()=> ({
-        posts: []
-        //posts: GetWall(session.user.handle)
+        posts: [],
+        newPost: newPost()
     }),
     async mounted(){
         this.posts = await GetFeed(session.user.handle)

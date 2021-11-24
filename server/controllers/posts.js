@@ -30,6 +30,22 @@ app
 
         res.status(201).send(newPost);
     })
+    .patch("/:id", (req, res, next) =>{
+        model   .Update(req.params.id, req.body)
+                .then( x=> res.send(x) )
+                .catch(next) 
+    })
+    .delete("/:id", (req, res, next) =>{
+        model   .Delete(req.params.id)
+                .then( x=> res.send({ deleted: x }) )
+                .catch(next) 
+    })
+
+    .post("/seed", (req, res, next) =>{
+        model   .Seed()
+                .then( x=> res.status(201).send("Created") )
+                .catch(next)
+    })
 
 
 module.exports = app;
