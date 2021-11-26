@@ -4,6 +4,8 @@
             Welcome to Purposeful Fitness
 
             Purposeful Fitness is an application that is meant to help you in your exercise routine
+
+            ~This line is meant to test build~
         </pre>
 
       <div class="container">
