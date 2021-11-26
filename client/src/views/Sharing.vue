@@ -34,6 +34,18 @@ export default {
     }),
     async mounted(){
         this.posts = await GetFeed(session.user.handle)
-    }
+    },
+    /*methods: {
+      async add(){
+        console.log("Adding new post at " + new Date())
+        const response = await Add(this.newPost);
+        console.log({ response });
+
+        if(response){
+          this.posts.unshift(response);
+            this.newPost = newPost();
+        }
+      }
+    }*/
 }
 </script>
