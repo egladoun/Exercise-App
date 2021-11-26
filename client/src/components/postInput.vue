@@ -1,17 +1,18 @@
 <template>
-    <form class="card" style="margin-left: 20%; margin-right: 20%;" @submit.prevent="$emit('add')">
+    <form class="card" style="margin-left: 20%; margin-right: 20%; border-color: black;
+    border-style: none none solid none;" @submit.prevent="$emit('add')">
         <div class="card-content">
             <div class="content">
                 <div class="field">
                     <label class="label">Picture</label>
                     <div class="control">
-                        <input class="input" type="url" placeholder="Input a URL to a picture" v-model="post.src" />
+                        <input class="input is-rounded" type="url" placeholder="Input a URL to a picture" v-model="post.src" />
                     </div>
                 </div>
                 <div class="field">
                     <label class="label">Alt</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Some alternate text for this picture" v-model="post.alt" />
+                        <input class="input is-rounded" type="text" placeholder="Some alternate text for this picture" v-model="post.alt" />
                     </div>
                 </div>
 
@@ -37,8 +38,8 @@
             </div>
         </div>
         <footer class="card-footer">
-            <button class="button is-link card-footer-item" type="submit">Submit</button>
-            <button class="button is-link is-light card-footer-item" type="reset">Cancel</button>
+            <button class="button is-link is-rounded card-footer-item " type="submit">Submit</button>
+            <button class="button is-link is-rounded is-light card-footer-item" type="reset">Cancel</button>
 
         </footer>
     </form>

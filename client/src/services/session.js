@@ -19,5 +19,3 @@ const session = {
 };
 
 export default session;
-
-//export function
