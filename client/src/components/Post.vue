@@ -36,7 +36,24 @@
       </button>
     </div>
     <div>
-      <form class="card" style="margin-top: 2%; margin-left: 5%; margin-right: 5%; border-color: black;
+      <p>{{post._id}}</p>
+      <!--<form class="card" style="margin-top: 2%; margin-left: 5%; margin-right: 5%; border-color: black;
+        border-style: none none solid none;" @submit.prevent="$emit('edit')">
+          <label class="label">Caption</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Some text to explain this picture" v-model="caption"></textarea>
+            </div>
+
+            <footer class="card-footer">
+              <button class="button is-link is-rounded card-footer-item" 
+                type="submit">
+                  Submit
+              </button>
+              <button class="button is-link is-rounded is-light card-footer-item" type="reset">Cancel</button>
+            </footer>
+      </form>-->
+
+      <!--<form class="card" style="margin-top: 2%; margin-left: 5%; margin-right: 5%; border-color: black;
         border-style: none none solid none;">
           <div class="field">
                     <label class="label">Picture</label>
@@ -70,7 +87,7 @@
                         </label>
                     </div>
                 </div>
-      </form>
+      </form>-->
     </div>
   </div>
 </template>

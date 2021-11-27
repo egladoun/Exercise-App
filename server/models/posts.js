@@ -69,7 +69,7 @@ module.exports.Add = async function Add(post) {
 }
 module.exports.Update = async function Update(post_id, post) {
     const results = await collection.findOneAndUpdate(
-        {_id: new ObjectId(post_id) }, 
+        {_id: new ObjectId(post_id) },
         { $set: post },
         { returnDocument: 'after'}
     );

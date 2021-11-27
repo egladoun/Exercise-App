@@ -128,11 +128,12 @@ Content-Type: application/json
 DELETE  http://localhost:3100/posts/619e967efec250af513b4a2b
 
 ###
-PATCH http://localhost:3100/posts/619e967efec250af513b4a2b
+PATCH http://localhost:3100/posts/61a1445e590287419725607e
 Content-Type: application/json
 
 {
-    "caption": "A bike"
+    "alt": "a picture of a bike",
+    "caption": "a bike"
 }
 
 ###

@@ -7,6 +7,7 @@
 
             <div class="post" v-for="(p, i) in posts" :key="p.src">
                 <post :post="p" @remove="remove(p, i)" />
+                <postEdit :newPost="newPost" @edit="edit(p._id, i)" />
             </div>
 
 
@@ -18,15 +19,17 @@
 <script>
 import Post from '../components/Post.vue';
 import session from "../services/session";
-import { Add, Delete, GetFeed } from "../services/posts";
+import { Add, Update, Delete, GetFeed } from "../services/posts";
 import postInput from "../components/postInput.vue";
+import postEdit from "../components/postEdit.vue"
 
 const newPost = ()=> ({ user: session.user, user_handle: session.user.handle })
 
 export default {
   components: {
     Post,
-    postInput
+    postInput,
+    postEdit
     },
     data: ()=> ({
         posts: [],
@@ -45,9 +48,22 @@ export default {
             this.newPost = newPost();
         }
       },
+      //this method is still in progress
+      async edit(p_id, i){
+        //console.log({post})
+        const response = await Update(p_id, this.newPost)
+        
+        if(response){
+          this.posts.splice(i, 1, this.newPost)
+        }
+
+        /*Update(p._id, p)
+        this.posts.splice(i, 1, p)*/
+      },
       async remove(post, i){
         console.log({post})
         const response = await Delete(post._id)
+
         if(response.deleted){
           this.posts.splice(i, 1)
         }

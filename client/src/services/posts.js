@@ -1,7 +1,5 @@
 import { api } from "./myFetch";
 
-
-
 export function GetAll() {
     return api('posts');
 }
@@ -17,10 +15,13 @@ export function GetFeed(handle) {
 export function Get(post_id) { return api('posts/' + post_id); }
 
 export function Add(post) {
-     return api('posts', post);
+    return api('posts', post);
 }
+
+// THIS FUNCTION HAS BEEN CHANGED
 export function Update(post_id, post) {
-    return { post_id, post};
+    //return { post_id, post};
+    return api('posts/' + post_id, post, 'PATCH');
 }
 export function Delete(post_id) {
     return api('posts/' + post_id, {}, 'DELETE');
