@@ -60,16 +60,16 @@ module.exports.Add = async function Add(user) {
 
     const hash = await bcrypt.hash(user.password, +process.env.SALT_ROUNDS)
     
-        console.log({
-            user, salt: process.env.SALT_ROUNDS, hash
-        })
+    console.log({
+        user, salt: process.env.SALT_ROUNDS, hash
+    })
         
-        user.password = hash;
+    user.password = hash;
 
-        const user2 = await collection.insertOne(user);
-        user._id = user2.insertedId;
+    const user2 = await collection.insertOne(user);
+    user._id = user2.insertedId;
 
-        return { ...user, password: undefined };
+    return { ...user, password: undefined };
 }
 
 

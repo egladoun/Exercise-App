@@ -26,9 +26,9 @@ app
         res.send(model.Get(req.params.id));
     })
     .post("/", (req, res, next) =>{
-        const newPost = model.Add(req.body)
+        const newlogItem = model.Add(req.body)
 
-        res.status(201).send(newPost);
+        res.status(201).send(newlogItem);
     })
     .patch("/:id", (req, res, next) =>{
         model   .Update(req.params.id, req.body)

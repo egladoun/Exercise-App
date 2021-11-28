@@ -144,3 +144,33 @@ Content-Type: application/json
     "caption": "I ran a mile.",
     "user_handle": "@jj"
 }
+
+###
+POST http://localhost:3100/logItems
+Content-Type: application/json
+
+{
+    "caption": "I did 20 squats.",
+    "user_handle": "@jj"
+}
+
+###
+POST http://localhost:3100/logItems
+Content-Type: application/json
+
+{
+    "caption": "I did 10 pushups and 10 pullups.",
+    "user_handle": "@jj"
+}
+
+###
+POST http://localhost:3100/logItems
+Content-Type: application/json
+
+{
+    "caption": "This log item is meant to be deleted.",
+    "user_handle": "@ms"
+}
+
+###
+DELETE  http://localhost:3100/logItems/61a3d33f95217b1e51ad6df3
