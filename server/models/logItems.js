@@ -48,11 +48,11 @@ module.exports.GetFeed = async function (handle) {
 }
 
 
-module.exports.Get = function Get(logItem_id) { return collection.findOne({_id: new ObjectId(logItem_id) }); }
+module.exports.Get = function Get(post_id) { return collection.findOne({_id: new ObjectId(post_id) }); }
 
 module.exports.Add = async function Add(logItem) {
     if(!logItem.user_handle){
-        throw {code: 422, msg: "Log Item must have an Owner"}
+        throw {code: 422, msg: "Post must have an Owner"}
     }
     logItem.time = Date();
     
@@ -62,17 +62,17 @@ module.exports.Add = async function Add(logItem) {
 
     return { ...logItem };
 }
-module.exports.Update = async function Update(logItem_id, logItem) {
+module.exports.Update = async function Update(post_id, post) {
     const results = await collection.findOneAndUpdate(
-        {_id: new ObjectId(logItem_id) },
-        { $set: logItem },
+        {_id: new ObjectId(post_id) },
+        { $set: post },
         { returnDocument: 'after'}
     );
 
     return results.value;
 }
-module.exports.Delete = async function Delete(logItem_id) {
-    const results = await collection.findOneAndDelete({_id: new ObjectId(logItem_id) })
+module.exports.Delete = async function Delete(post_id) {
+    const results = await collection.findOneAndDelete({_id: new ObjectId(post_id) })
 
     return results.value;
 } 
