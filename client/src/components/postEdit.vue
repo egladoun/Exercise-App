@@ -42,8 +42,8 @@
             </div>
         </div>
         <footer class="card-footer">
-            <button class="button is-link is-rounded card-footer-item " type="submit">Submit</button>
-            <button class="button is-link is-rounded is-light card-footer-item" type="reset">Cancel</button>
+            <button class="button is-link is-rounded is-warning card-footer-item " type="submit">Edit</button>
+            <button class="button is-link is-rounded is-info card-footer-item" type="reset">Cancel</button>
         </footer>
     </form>
 </template>

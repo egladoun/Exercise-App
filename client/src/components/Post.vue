@@ -26,10 +26,6 @@
     </div>
 
     <div class="card-footer">
-      <button class="button is-link is-rounded is-warning card-footer-item " 
-        type="submit">
-          Edit 
-      </button>
       <button class="button is-link is-rounded is-danger card-footer-item" 
         @click="$emit('remove')">
           Delete
