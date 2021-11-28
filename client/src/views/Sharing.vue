@@ -48,17 +48,12 @@ export default {
             this.newPost = newPost();
         }
       },
-      //this method is still in progress
       async edit(p_id, i){
-        //console.log({post})
         const response = await Update(p_id, this.newPost)
         
         if(response){
           this.posts.splice(i, 1, this.newPost)
         }
-
-        /*Update(p._id, p)
-        this.posts.splice(i, 1, p)*/
       },
       async remove(post, i){
         console.log({post})

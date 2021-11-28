@@ -35,60 +35,6 @@
           Delete
       </button>
     </div>
-    <div>
-      <p>{{post._id}}</p>
-      <!--<form class="card" style="margin-top: 2%; margin-left: 5%; margin-right: 5%; border-color: black;
-        border-style: none none solid none;" @submit.prevent="$emit('edit')">
-          <label class="label">Caption</label>
-            <div class="control">
-              <textarea class="textarea" placeholder="Some text to explain this picture" v-model="caption"></textarea>
-            </div>
-
-            <footer class="card-footer">
-              <button class="button is-link is-rounded card-footer-item" 
-                type="submit">
-                  Submit
-              </button>
-              <button class="button is-link is-rounded is-light card-footer-item" type="reset">Cancel</button>
-            </footer>
-      </form>-->
-
-      <!--<form class="card" style="margin-top: 2%; margin-left: 5%; margin-right: 5%; border-color: black;
-        border-style: none none solid none;">
-          <div class="field">
-                    <label class="label">Picture</label>
-                    <div class="control">
-                        <input class="input is-rounded" type="url" placeholder="Input a URL to a picture" />
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Alt</label>
-                    <div class="control">
-                        <input class="input is-rounded" type="text" placeholder="Some alternate text for this picture" />
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label">Caption</label>
-                    <div class="control">
-                        <textarea class="textarea" placeholder="Some text to explain this picture"></textarea>
-                    </div>
-                </div>
-
-                <div class="field">
-                    <div class="control">
-                        <label class="radio">
-                            <input type="radio" name="question" />
-                            Public
-                        </label>
-                        <label class="radio">
-                            <input type="radio" name="question" />
-                            Private
-                        </label>
-                    </div>
-                </div>
-      </form>-->
-    </div>
   </div>
 </template>
 

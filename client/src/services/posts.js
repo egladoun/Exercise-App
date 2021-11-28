@@ -18,9 +18,7 @@ export function Add(post) {
     return api('posts', post);
 }
 
-// THIS FUNCTION HAS BEEN CHANGED
 export function Update(post_id, post) {
-    //return { post_id, post};
     return api('posts/' + post_id, post, 'PATCH');
 }
 export function Delete(post_id) {

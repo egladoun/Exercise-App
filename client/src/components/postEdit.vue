@@ -55,10 +55,6 @@ export default {
     },
     data(){
         return {
-            /*post: {
-                id: this.post._id,
-                caption: this.caption
-            }*/
             post: this.newPost
         }
     },
