@@ -11,6 +11,8 @@
             <figure>
                 <img :src=picture :alt=user_handle>
             </figure>
+
+            <p>Following: {{following}}</p>
         </div>
     </div>
 </template>
@@ -38,7 +40,11 @@ export default {
         },
         picture(){
             return this.Session.user.pic;
+        },
+        following(){
+            return this.Session.user.following;
         }
+        
     }
 }
 </script>

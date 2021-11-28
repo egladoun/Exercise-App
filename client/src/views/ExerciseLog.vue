@@ -2,9 +2,9 @@
   <div class="Sharing">
     <div class="container">
         <div class="column">
-            
-            <div class="post" v-for="p in posts" :key="p.src">
-                <post :post="p" />
+
+            <div class="logItem" v-for="l in logItems" :key="l.caption">
+                <logItem :logItem="l" />
             </div>
 
 
@@ -14,13 +14,19 @@
 </template>
 
 <script>
-import Post from '../components/Post.vue';
+import logItem from '../components/logItem.vue';
 import session from "../services/session";
-import { GetWall } from "../services/posts";
+import { GetFeed } from "../services/logItems";
+
 export default {
-  components: { Post },
+  components: {
+        logItem
+    },
     data: ()=> ({
-        posts: GetWall(session.user.handle)
-    })
+        logItems: []
+    }),
+    async mounted(){
+        this.logItems = await GetFeed(session.user.handle)
+    }
 }
 </script>

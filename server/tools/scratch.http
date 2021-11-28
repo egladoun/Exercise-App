@@ -69,11 +69,26 @@ Content-Type: application/json
 DELETE http://localhost:3100/users/6199a0d1a1535713462499f0
 
 ###
-PATCH http://localhost:3100/users/6199a08ba1535713462499ef
+PATCH http://localhost:3100/users/619e7b03fcbc1bc4575ece04
 Content-Type: application/json
 
 {
-    "firstName": "Romeo"
+    "following": [
+        { "handle": "@ms", "isApproved": true },
+        { "handle": "@romeo", "isApproved": true },
+        { "handle": "@juliet", "isApproved": true }
+        //{ "handle": "@ms", "isApproved": true }
+    ]
+}
+
+###
+PATCH http://localhost:3100/users/619e7b03fcbc1bc4575ece04
+Content-Type: application/json
+
+{
+    "following": [
+        { "handle": "@ms", "isApproved": true }
+    ]
 }
 
 ###
@@ -137,6 +152,9 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:3100/posts/wall/@ms
+
+###
 POST http://localhost:3100/logItems
 Content-Type: application/json
 
@@ -168,9 +186,15 @@ POST http://localhost:3100/logItems
 Content-Type: application/json
 
 {
-    "caption": "This log item is meant to be deleted.",
+    "caption": "I used the treadmill.",
     "user_handle": "@ms"
 }
 
 ###
 DELETE  http://localhost:3100/logItems/61a3d33f95217b1e51ad6df3
+
+###
+POST http://localhost:3100/users/@jj/follow/@romeo
+
+###
+POST http://localhost:3100/users/@jj/follow/@juliet

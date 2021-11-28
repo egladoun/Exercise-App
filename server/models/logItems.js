@@ -31,8 +31,19 @@ module.exports.GetAll = function GetAll() {
     return collection.aggregate(addOwnerPipeline).toArray();
 }
 
-module.exports.GetWall = function GetWall(handle) {
+/*module.exports.GetWall = function GetWall(handle) {
     return collection.aggregate(addOwnerPipeline).match({ user_handle: handle }).toArray();
+}*/
+
+module.exports.GetWall = async function GetWall(handle) {
+    const user = await Users.collection.findOne({ handle });
+    if(!user){
+        throw { code: 404, msg: 'No such user'};
+    }
+    const query = collection.aggregate(addOwnerPipeline).match({ user_handle: handle });
+    if (query){
+        return query.toArray();
+    }
 }
 
 module.exports.GetFeed = async function (handle) {
