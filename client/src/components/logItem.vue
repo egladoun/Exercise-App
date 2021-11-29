@@ -10,9 +10,8 @@
     </div>
 
     <div class="card-footer">
-      <!--<button class="button is-link is-rounded is-danger card-footer-item" 
-        @click="$emit('remove')">-->
-        <button class="button is-link is-rounded is-danger card-footer-itesm">
+      <button class="button is-link is-rounded is-danger card-footer-item" 
+        @click="$emit('remove')">
           Delete
       </button>
     </div>
