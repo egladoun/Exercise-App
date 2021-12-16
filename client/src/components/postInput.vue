@@ -76,7 +76,7 @@ export default {
         return {
             post: this.newPost,
             //data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
-            data: [session.user.firstName],
+            data: [session.user.following],
             name: '',
             selected: null
         }
