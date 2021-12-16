@@ -66,6 +66,8 @@
 </template>
 
 <script>
+import session from "../services/session";
+
 export default {
     props: {
         newPost: Object
@@ -73,8 +75,8 @@ export default {
     data(){
         return {
             post: this.newPost,
-            data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
-            //data: [this.user.firstName],
+            //data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
+            data: [session.user.firstName],
             name: '',
             selected: null
         }
