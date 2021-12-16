@@ -42,10 +42,10 @@
 
                 <section>
                     <p class="content"><b>Selected:</b> {{ selected }}</p>
-                    <o-field label="Find a JS framework">
-                    <o-autocomplete rounded expanded v-model="name" :data="filteredDataArray" placeholder="e.g. jQuery" icon="search" clearable @select="option => selected = option">
-                           <template slot:empty>No results found</template>
-                    </o-autocomplete>
+                    <o-field label="Find a friend">
+                        <o-autocomplete rounded expanded v-model="name" :data="filteredDataArray" placeholder="Enter friend name here" icon="search" clearable @select="option => selected = option">
+                            <template v-slot:empty>No results found</template>
+                        </o-autocomplete>
                     </o-field>
                 </section>
 
@@ -72,8 +72,24 @@ export default {
     },
     data(){
         return {
-            post: this.newPost
+            post: this.newPost,
+            data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
+            //data: [this.user.firstName],
+            name: '',
+            selected: null
         }
+    },
+    computed: {
+      filteredDataArray() {
+        return this.data.filter(option => {
+          return (
+            option
+              .toString()
+              .toLowerCase()
+              .indexOf(this.name.toLowerCase()) >= 0
+          )
+        })
+      }
     },
     watch: {
         newPost(){
